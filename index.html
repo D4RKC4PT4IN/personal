@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top Games 2026</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- Video Background Slider -->
+<div class="video-slider">
+    <video class="bg-video active" autoplay muted loop>
+        <source src="images/game1.mp4" type="video/mp4">
+    </video>
+    <video class="bg-video" autoplay muted loop>
+        <source src="images/game2.mp4" type="video/mp4">
+    </video>
+    <video class="bg-video" autoplay muted loop>
+        <source src="images/game3.mp4" type="video/mp4">
+    </video>
+    <video class="bg-video" autoplay muted loop>
+        <source src="images/game4.mp4" type="video/mp4">
+    </video>
+    <video class="bg-video" autoplay muted loop>
+        <source src="images/game5.mp4" type="video/mp4">
+    </video>
+</div>
+
+<!-- Dark overlay for readability -->
+<div class="overlay"></div>
+
+<header>
+    <h1>Top Free Games of 2026</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="welcome">
+        <p>
+        Welcome to Top Games of 2026, your guide to the most exciting
+        and trending video games this year. Explore the featured titles
+        and discover what makes each one unique.
+        </p>
+    </section>
+</main>
+
+<!-- Bottom game info -->
+<div class="game-info">
+    <h2 id="game-title">Marvel Rivals</h2>
+    <p id="game-desc">
+        Marvel Rivals is a hero shooter video game developed and published by NetEase Games in collaboration with Marvel Games. The game was released for PlayStation 5, Windows, and Xbox Series X/S on December 6, 2024, with a PlayStation 4 version released on September 12, 2025.
+    </p>
+</div>
+
+<!-- Side Slider Buttons -->
+<div class="slider-buttons">
+    <button id="prev">◀</button>
+    <button id="next">▶</button>
+</div>
+
+
+<script>
+const videos = document.querySelectorAll(".bg-video");
+
+const games = [
+    {title:"Marvel Rivals", desc:"Marvel Rivals is a hero shooter video game developed and published by NetEase Games in collaboration with Marvel Games. The game was released for PlayStation 5, Windows, and Xbox Series X/S on December 6, 2024, with a PlayStation 4 version released on September 12, 2025."},
+    {title:"Call of Duty: Warzone", desc:"Call of Duty: Warzone was a 2020 free-to-play battle royale first-person shooter game developed by Raven Software and Infinity Ward and published by Activision."},
+    {title:"Arknights: Endfield", desc:"Arknights: Endfield is an action role-playing game developed by the Chinese developer Hypergryph, published by them in China, and published elsewhere by its international division, Gryphline. It is a spinoff of Hypergryph's 2019 tower defense game Arknights."},
+    {title:"Genshin Impact", desc:"Genshin Impact is a 2020 action role-playing game produced by miHoYo. The game features an anime-style open world environment and an action-based battle system using elemental magic and character-switching."},
+    {title:"League of Legends", desc:"League of Legends, commonly referred to as League, is a multiplayer online battle arena video game developed and published by Riot Games. Inspired by Defense of the Ancients, a custom map for Warcraft III, Riot's founders sought to develop a stand-alone game in the same genre."}
+];
+
+let index = 0;
+
+function showSlide(i){
+    videos.forEach(v => v.classList.remove("active"));
+    videos[i].classList.add("active");
+
+    document.getElementById("game-title").textContent = games[i].title;
+    document.getElementById("game-desc").textContent = games[i].desc;
+}
+
+document.getElementById("next").onclick = () => {
+    index = (index + 1) % videos.length;
+    showSlide(index);
+};
+
+document.getElementById("prev").onclick = () => {
+    index = (index - 1 + videos.length) % videos.length;
+    showSlide(index);
+};
+</script>
+
+</body>
+</html>
