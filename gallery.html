@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -132,4 +133,140 @@ footer {
 </footer>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top Games 2026</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ===== Body & Layout ===== */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Audiowide", sans-serif;
+    flex-direction: column; /* Stack header, main, footer vertically */
+}
+
+/* ===== Video Background ===== */
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* ===== Main Content ===== */
+main {
+    flex: 1; /* This pushes the footer down */
+    padding: 50px 20px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4); /* optional overlay for readability */
+}
+
+/* ===== Gallery Grid ===== */
+.gallery .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.gallery figure {
+    margin: 0;
+    border: 2px solid #801264;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.gallery figure:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #860505;
+}
+
+.gallery img {
+    width: 100%;
+    display: block;
+}
+
+.gallery figcaption {
+    padding: 10px;
+    text-align: center;
+    color: #00e1ff;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 2;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Video Background -->
+<video class="video-bg" autoplay muted loop>
+    <source src="images/bg1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<header>
+    <h1>Top Free Games of 2026</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <section class="gallery">
+        <h2>Upcoming Games</h2>
+        <div class="grid">
+            <figure>
+                <img src="images/img1.jpg" alt="Grand Theft Auto VI">
+                <figcaption>Grand Theft Auto VI is an upcoming action-adventure game developed and published by Rockstar Games. It is due to be the eighth main Grand Theft Auto game, following Grand Theft Auto V, and the sixteenth entry overall.</figcaption>
+            </figure>
+            <figure>
+                <img src="images/img2.jpg" alt="Resident Evil Requiem">
+                <figcaption>Resident Evil Requiem is an upcoming survival horror game developed and published by Capcom. It is the ninth main game in the Resident Evil series, following Resident Evil Village.</figcaption>
+            </figure>
+            <figure>
+                <img src="images/img3.jpg" alt="Gears of War: E-Day">
+                <figcaption>Gears of War: E-Day is an upcoming third-person shooter video game developed by The Coalition and People Can Fly and published by Xbox Game Studios. As the sixth mainline installment in the Gears of War franchise, it is set 14 years before the events of the original game.</figcaption>
+            </figure>
+            <figure>
+                <img src="images/img4.jpg" alt="Tomb Raider: Legacy of Atlantis">
+                <figcaption>Tomb Raider: Legacy of Atlantis is an upcoming action-adventure game developed by Crystal Dynamics and Flying Wild Hog and published by Amazon Game Studios. The game is a remake of Tomb Raider, featuring a blend of classic exploration, intricate puzzle-solving, and expanded storytelling.</figcaption>
+            </figure>
+            <figure>
+                <img src="images/img5.png" alt="Halo: Campaign Evolved">
+                <figcaption>Halo: Campaign Evolved is an upcoming first-person shooter game developed by Halo Studios and published by Xbox Game Studios. It is a remake of Halo: Combat Evolved, the first installment of the Halo franchise originally developed by Bungie for the Xbox console.</figcaption>
+            </figure>
+            <figure>
+                <img src="images/img6.jpg" alt="Forza Horizon 6">
+                <figcaption>Forza Horizon 6 is an open-world racing game developed by Playground Games and set in Japan, launching on May 19, 2026, for Xbox Series X/S, PC, and later on PS5. Featuring over 550 cars, it includes a massive, dense map with Tokyo as the main city and supports full cross-play and cross-save functionality across all platforms. </figcaption>
+            </figure>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Top Games</p>
+</footer>
+
+</body>
+>>>>>>> 0acfee2462a709a790eeb1108839b47340acce5f
 </html>
